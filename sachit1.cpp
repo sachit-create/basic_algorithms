@@ -1,6 +1,5 @@
 //  this code will sort o on left side and ones on right side of the array.
 #include<iostream>
-#include<vector>
 
 using namespace std;
 
