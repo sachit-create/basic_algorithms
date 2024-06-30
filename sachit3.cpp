@@ -1,6 +1,7 @@
 #include<iostream>
  using namespace std;
 // this code will merge 2 sorted array(if not then sort them) into 3 merging array.
+// time complexity O((n1 + n2)^2)
  void array_merge(int arr1[],int arr2[], int merge[],int n1 , int n2){
       int i;
       int n3 = n1 + n2;
