@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// this code will prints the hcf between two numbers if posible.
 int hcf(int a , int b){
     if(b == 0){
         return a;
