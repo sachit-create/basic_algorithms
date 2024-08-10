@@ -36,6 +36,13 @@ public:
         }
     }
 
+    void pop(){// this will hide the element from top of the stack which will overwrite by push method.
+        if(top == -1){
+            cout << "stack is empty yet."<< endl;
+        }
+        top--;
+    }
+
     // Destructor to free the memory allocated for the stack
     ~Stack() {
         delete[] arr;
@@ -49,7 +56,8 @@ int main() {
     stack1.push(3);
     stack1.push(2);
     stack1.push(1);
-    stack1.push(0); // This will show "Stack is full" because the stack size is 5 
+    stack1.pop();
+    stack1.push(0);
     stack1.get();
 
     return 0;
