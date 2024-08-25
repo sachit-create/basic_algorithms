@@ -1,30 +1,69 @@
 #include <iostream>
 using namespace std;
+// for sorted linked list only.
+class Node{
+   public:
+     int value;
+     Node* next;
 
-class node{
-  public:
-    int value;
-    node *next;
-
-    node(int data){
-        value = data;
+     Node(int val){
+        value = val;
         next = NULL;
+     }
+};
+
+class LinkedList{
+   public:
+      Node* head;
+      LinkedList(){
+        head = NULL;
+      }
+
+      void insert(int val){
+         Node* newn = new Node(val);
+         newn->next = head;
+         head = newn;
+      }
+
+     void display(){
+        Node* temp = head;
+        while(temp != NULL){
+            cout << temp->value << " --- ";
+            temp = temp->next;
+        }
+        cout << "NULL" << endl;
+     } 
+
+    void dlt_dupli(){
+        Node* current = head;
+        while(current){
+            while(current->next && current->value == current->next->value){
+               Node * temp = current->next;
+               current->next = current->next->next;
+               delete temp;
+            }current = current->next;
+         }
     }
 
-    node(int data, node *n){
-        value = data;
-        next = NULL;
-        n->next = this; // Correctly links the previous node to the new node
+    void rev(Node * head){
+        if(head == NULL){ 
+           return;
+        }
+        rev(head->next);
+        cout << head->value << " ";
     }
-    
 };
 
 int main(){
-    node*n = new node(2);
-    node*n1 = new node(3,n);
-    node*n2 = new node(4,n1);
-    cout << n->value << " " << n->next->value << " --- ";  
-    cout << n1->value << " " << n1->next->value << " --- ";
-    cout << n2->value << " " << n2->next << endl;
+    LinkedList ll;
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(5);
+    ll.insert(5);
+    ll.insert(6);
+    ll.insert(6);
+    ll.insert(6);
+    ll.display();
+    ll.rev(ll.head);
     return 0;
 }
