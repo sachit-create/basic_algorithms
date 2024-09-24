@@ -50,7 +50,7 @@ class LinkedList{
            return;
         }
         rev(head->next);
-        cout << head->value << " ";
+        cout << head->value << " --- ";
     }
 };
 
@@ -62,7 +62,7 @@ int main(){
     ll.insert(5);
     ll.insert(6);
     ll.insert(6);
-    ll.insert(6);
+   // ll.insert(6);
     ll.display();
     ll.rev(ll.head);
     return 0;
