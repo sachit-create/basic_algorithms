@@ -1,6 +1,6 @@
 #include <iostream> 
 using namespace std;
-// give the sqrt of any integer using binary search.
+// give the sqrt of any integer using binary search.(non recursive)
 int binary_modified(int t){
     // time complexity O(logt).
     int l = 0;
@@ -17,7 +17,6 @@ int binary_modified(int t){
             r = mid-1;
         }
     }
-    
     return ans;
 }
 
