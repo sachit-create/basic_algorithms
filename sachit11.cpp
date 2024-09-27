@@ -1,4 +1,4 @@
-// give code will return you nth fibonnaci number.
+// Give code will return you nth Fibonnaci number.
 #include<iostream>
 
 using namespace std;
