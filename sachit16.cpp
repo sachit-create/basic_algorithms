@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//this code will check a number is palindrome or not through recursion.way =2.
+//This code will check a number is palindrome or not through recursion.
 bool func(int n , int *temp){
     if(n>=0 and n<=9){
         int lastdigitoftemp = (*temp)%10;
