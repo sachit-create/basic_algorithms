@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-// efficient code for finding target differnce. time compl3exity O(n).
+//Efficient code for finding target differnce. Time compl3exity O(n).
 int main(){
     int arr[] = {1,2,3,4,5};
     int target = 6;
