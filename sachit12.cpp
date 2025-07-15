@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// recusive code to calculate power ..
 int pow(int p , int q){
     if(q==0) return 1;
     return p * pow(p,q-1);
